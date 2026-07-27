@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary:    #ece1cd;   /* cream — tile bg / hover */
+  --color-secondary:  #6b5844;   /* medium brown — company/venue text */
+  --color-accent:     #4a3a29;   /* dark brown — title bars, borders */
+  --color-background: #ece1cd;   /* light cream — window bodies */
+  --color-muted:      #8a7b64;   /* warm muted brown */
+  --color-foreground: #2e2419;   /* deep brown — primary text */
+  --color-landing:    #2a2119;   /* dark brown — landing background */
+  --color-highlight:  #c26a1f;   /* terracotta — eye-catching accent */
+
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Airy canvas gradient behind the window (light = soft sky, dark = dusk). */
+:root {
+  --canvas-top: #c2dade;
+  --canvas-bottom: #a3c4cc;
+}
+
+:root.dark {
+  --canvas-top: #2b3438;
+  --canvas-bottom: #1c2427;
+
+  --color-primary: #37302a;
+  --color-secondary: #cba876;
+  --color-accent: #5f4d39;
+  --color-background: #2a2520;
+  --color-muted: #9a8c76;
+  --color-foreground: #ece1cd;
+  --color-highlight: #e0913f;
+}
+
+body {
+  background: linear-gradient(180deg, var(--canvas-top) 0%, var(--canvas-bottom) 100%);
+  background-attachment: fixed;
+}
+
+@keyframes expand-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-expand {
+  animation: expand-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes shrink-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+
+.animate-shrink {
+  animation: shrink-out 0.3s cubic-bezier(0.55, 0, 0.68, 0.19) both;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(2deg);
+  }
+}
+
+.animate-float {
+  animation: float 4.5s ease-in-out infinite;
+}
