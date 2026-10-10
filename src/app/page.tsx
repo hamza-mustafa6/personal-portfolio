@@ -60,7 +60,7 @@ export default function Home() {
           Hamza Mustafa
         </button>
         <p className="text-white/40 text-2xl mt-8 tracking-[0.3em] uppercase animate-pulse">
-          click me
+          click my name to enter ^
         </p>
       </div>
 
