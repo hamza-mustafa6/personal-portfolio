@@ -24,21 +24,6 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "ThriftBred",
-    status: "In Progress",
-    tags: ["Spring Boot", "Next.js", "PostgreSQL", "Docker", "Stripe"],
-    // image: "/projects/thriftbred.png",
-    body: (
-      <>
-        A <Hl>thrifting marketplace</Hl> for Skidmore students, built around the
-        school&apos;s <Hl>sustainability</Hl> values — authenticated listings,
-        peer-to-peer purchases, and end-to-end <Hl>Stripe checkout</Hl> with
-        reliable data persistence.
-      </>
-    ),
-    links: [{ label: "GitHub", url: "https://github.com/hamza-mustafa6" }],
-  },
-  {
     name: "Shift2Sakura",
     status: "Complete",
     tags: ["Next.js", "Node.js", "PostgreSQL"],
@@ -77,6 +62,21 @@ const projects: Project[] = [
     links: [
       { label: "GitHub", url: "https://github.com/hamza-mustafa6/CheckersAI" },
     ],
+  },
+  {
+    name: "ThriftBred",
+    status: "In Progress",
+    tags: ["Spring Boot", "Next.js", "PostgreSQL", "Docker", "Stripe"],
+    // image: "/projects/thriftbred.png",
+    body: (
+      <>
+        A <Hl>thrifting marketplace</Hl> for Skidmore students, built around the
+        school&apos;s <Hl>sustainability</Hl> values — authenticated listings,
+        peer-to-peer purchases, and end-to-end <Hl>Stripe checkout</Hl> with
+        reliable data persistence.
+      </>
+    ),
+    links: [{ label: "GitHub", url: "https://github.com/hamza-mustafa6" }],
   },
 ];
 
